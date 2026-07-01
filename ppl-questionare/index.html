@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Saver Questionnaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Question Pages -->
+        <div id="question-1" class="step active">
+            <div class="question-container">
+                <h2 class="question-title">Which energy-saving tip are you more likely to try? Pick your favorite.</h2>
+                <div class="options-grid">
+                    <div class="option" onclick="selectOption(this, 1, 1)">
+                        <img src="images/q1-1.jpg" alt="Man opening the curtains of a window to let sunlight in">
+                        <div class="option-text">Open curtains to let in that free light—and comfy heat.</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 1, 2)">
+                        <img src="images/q1-2.jpg" alt="Woman turning off a table lamp in her living room">
+                        <div class="option-text">Turn off lights when you leave a room. Simple.</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 1, 3)">
+                        <img src="images/q1-3.jpg" alt="Woman adjusting the temperature of her water heater">
+                        <div class="option-text"><div>Lower your water heater to <span class="numeric">120°F</span> to save on hot water heating.</div></div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 1, 4)">
+                        <img src="images/q1-4.jpg" alt="Man cooking food in a large pan on the stove">
+                        <div class="option-text">Match pan size to burner size to minimize heat loss and shorten cooking times.</div>
+                    </div>
+                </div>
+                <div class="question-footer">
+                    <button class="next-button" id="next-1" onclick="nextQuestion(1)" disabled>Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="question-2" class="step">
+            <div class="question-container">
+                <h2 class="question-title">Which energy-saving tip are you more likely to try? Pick your favorite.</h2>
+                <div class="options-grid">
+                    <div class="option" onclick="selectOption(this, 2, 1)">
+                        <img src="images/q2-1.jpg" alt="Woman watching a show on her tablet in bed with her cat on her lap">
+                        <div class="option-text">Cuddle up and binge shows on a smaller device. The smaller the screen, the less energy it uses.</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 2, 2)">
+                        <img src="images/q2-2.jpg" alt="Man in a bathrobe drying his face in his bathroom">
+                        <div class="option-text">Take shorter showers. Use less energy to heat your water. Boom.</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 2, 3)">
+                        <img src="images/q2-3.jpg" alt="Woman sits on the floor in her living room looking at the Energy Analyzer tool on her laptop">
+                        <div class="option-text"><span>Track energy savings using our <a href="https://pplelectric.com/energyanalyzer" target="_blank" class="card-link">Energy Analyzer</a>.</span></div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 2, 4)">
+                        <img src="images/q2-4.jpg" alt="Woman at her stove cooking with a large saucepan with the lid on">
+                        <div class="option-text">Cover your pan to trap heat and cook that sauce faster.</div>
+                    </div>
+                </div>
+                <div class="question-footer">
+                    <button class="next-button" id="next-2" onclick="nextQuestion(2)" disabled>Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="question-3" class="step">
+            <div class="question-container">
+                <h2 class="question-title">Which energy-saving tip are you more likely to try? Pick your favorite.</h2>
+                <div class="options-grid">
+                    <div class="option" onclick="selectOption(this, 3, 1)">
+                        <img src="images/q3-1.jpg" alt="Man crouching to look at the gaps around his front door">
+                        <div class="option-text">Use draft stoppers to prevent air leaks and stay cozy.</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 3, 2)">
+                        <img src="images/q3-2.jpg" alt="Man pulling the chain to turn on his ceiling fan">
+                        <div class="option-text">Turn on your ceiling fan and turn down the heat—just circulate that warm air.</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 3, 3)">
+                        <img src="images/q3-3.jpg" alt="Woman adjusting the temperature on her thermostat">
+                        <div class="option-text"><div>Save up to <span class="numeric">10%</span> a year on heating by turning your thermostat back <span class="numeric">7°-10°F</span> for <span class="numeric">8</span> hours a day.</div></div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 3, 4)">
+                        <img src="images/q3-4.jpg" alt="Woman placing a lid on a container of steaming food">
+                        <div class="option-text">Let hot food cool before putting it in the fridge. It saves energy and helps food stay fresh.</div>
+                    </div>
+                </div>
+                <div class="question-footer">
+                    <button class="next-button" id="next-3" onclick="nextQuestion(3)" disabled>Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="question-4" class="step">
+            <div class="question-container">
+                <h2 class="question-title">Which energy-saving tip are you more likely to try? Pick your favorite.</h2>
+                <div class="options-grid">
+                    <div class="option" onclick="selectOption(this, 4, 1)">
+                        <img src="images/q4-1.jpg" alt="Woman smiling in front of a pile of clean laundry">
+                        <div class="option-text">Run back-to-back loads in a warm dryer, saving energy. Then get cozy with freshly dried clothes.</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 4, 2)">
+                        <img src="images/q4-2.jpg" alt="Woman watching a video on her tablet while wearing headphones">
+                        <div class="option-text">Use headphones late at night instead of blasting speakers. You’ll use less energy and won’t wake the house up.</div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 4, 3)">
+                        <img src="images/q4-3.jpg" alt="Man loading laundry into his washing machine">
+                        <div class="option-text"><div>Wash clothes in cold water. Hot water uses <span class="numeric">18%</span> of your home’s energy.</div></div>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 4, 4)">
+                        <img src="images/q4-4.jpg" alt="Man getting ready to heat food in the microwave">
+                        <div class="option-text">Warm up leftovers in the microwave to save on heating the oven.</div>
+                    </div>
+                </div>
+                <div class="question-footer">
+                    <button class="next-button" id="next-4" onclick="nextQuestion(4)" disabled>Complete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Page -->
+        <div id="result" class="step">
+            <div class="result-container">
+                <picture>
+                    <source id="result-image-mobile" media="(max-width: 600px)" srcset="">
+                    <img id="result-image" src="" alt="Result" class="result-image">
+                </picture>
+                <div class="result-overlay">
+                    <h2 id="result-title" class="result-title"></h2>
+                    <p id="result-description" class="result-description"></p>
+                    <button class="restart-button" onclick="restartQuiz()">Take Again</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section hidden">
+            <div class="progress-bar">
+                <div class="progress-fill" id="global-progress"></div>
+            </div>
+            <div class="progress-text" id="global-progress-text">0%</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
