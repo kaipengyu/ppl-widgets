@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Saver Questionnaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="question-1" class="step active">
+            <div class="slider-card">
+                <div class="q-view" id="q-view-1">
+                    <div class="question-hero"><img src="images/hero-1.webp" alt="Energy-saving question image 1"></div>
+                    <div class="question-content">
+                        <p class="question-text">Have you planted trees near your home to help keep it cooler?</p>
+                        <div class="slider-section">
+                            <input type="range" min="0" max="100" value="50" class="q-slider" id="slider-1" oninput="updateSlider(this)">
+                            <div class="slider-labels"><span>Yes</span><span>In progress</span><span>Not yet</span></div>
+                        </div>
+                        <div class="question-footer">
+                            <button class="submit-btn" onclick="submitAnswer(1)">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-view hidden" id="a-view-1">
+                    <div class="answer-hero"><img src="images/hero-1.webp" alt="Energy-saving result image 1"><img class="overlay-badge badge-pos-left badge-pos-top" src="images/badge-1.webp" alt="Question 1 badge"></div>
+                    <div class="answer-content">
+                        <p class="answer-title" id="answer-title-1"></p>
+                        <p class="answer-body-text" id="answer-text-1"></p>
+                        <div class="answer-buttons">
+                            <button class="prev-btn" onclick="goPreviousFromAnswer(1)">← Previous</button>
+                            <button class="next-btn" onclick="goNext(1)">Next &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-section hidden"><div class="progress-bar"><div class="progress-fill"></div></div><div class="progress-text">0%</div></div>
+        </div>
+
+        <div id="question-2" class="step">
+            <div class="slider-card">
+                <div class="q-view" id="q-view-2">
+                    <div class="question-hero"><img src="images/hero-2.webp" alt="Energy-saving question image 2"></div>
+                    <div class="question-content">
+                        <p class="question-text">Have you cleaned the area around your A/C?</p>
+                        <div class="slider-section">
+                            <input type="range" min="0" max="100" value="50" class="q-slider" id="slider-2" oninput="updateSlider(this)">
+                            <div class="slider-labels"><span>Yes</span><span>In progress</span><span>Not yet</span></div>
+                        </div>
+                        <div class="question-footer">
+                            <button class="prev-btn" onclick="goPreviousFromQuestion(2)">← Previous</button>
+                            <button class="submit-btn" onclick="submitAnswer(2)">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-view hidden" id="a-view-2">
+                    <div class="answer-hero"><img src="images/hero-2.webp" alt="Energy-saving result image 2"><img class="overlay-badge badge-pos-right badge-pos-top" src="images/badge-2.webp" alt="Question 2 badge"></div>
+                    <div class="answer-content">
+                        <p class="answer-title" id="answer-title-2"></p>
+                        <p class="answer-body-text" id="answer-text-2"></p>
+                        <div class="answer-buttons">
+                            <button class="prev-btn" onclick="goPreviousFromAnswer(2)">← Previous</button>
+                            <button class="next-btn" onclick="goNext(2)">Next &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-section hidden"><div class="progress-bar"><div class="progress-fill"></div></div><div class="progress-text">20%</div></div>
+        </div>
+
+        <div id="question-3" class="step">
+            <div class="slider-card">
+                <div class="q-view" id="q-view-3">
+                    <div class="question-hero"><img src="images/hero-3.webp" alt="Energy-saving question image 3"></div>
+                    <div class="question-content">
+                        <p class="question-text">Have you added shades to your windows?</p>
+                        <div class="slider-section">
+                            <input type="range" min="0" max="100" value="50" class="q-slider" id="slider-3" oninput="updateSlider(this)">
+                            <div class="slider-labels"><span>Yes</span><span>In progress</span><span>Not yet</span></div>
+                        </div>
+                        <div class="question-footer">
+                            <button class="prev-btn" onclick="goPreviousFromQuestion(3)">← Previous</button>
+                            <button class="submit-btn" onclick="submitAnswer(3)">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-view hidden" id="a-view-3">
+                    <div class="answer-hero"><img src="images/hero-3.webp" alt="Energy-saving result image 3"><img class="overlay-badge badge-pos-top" src="images/badge-3.webp" alt="Question 3 badge"></div>
+                    <div class="answer-content">
+                        <p class="answer-title" id="answer-title-3"></p>
+                        <p class="answer-body-text" id="answer-text-3"></p>
+                        <div class="answer-buttons">
+                            <button class="prev-btn" onclick="goPreviousFromAnswer(3)">← Previous</button>
+                            <button class="next-btn" onclick="goNext(3)">Next &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-section hidden"><div class="progress-bar"><div class="progress-fill"></div></div><div class="progress-text">40%</div></div>
+        </div>
+
+        <div id="question-4" class="step">
+            <div class="slider-card">
+                <div class="q-view" id="q-view-4">
+                    <div class="question-hero"><img src="images/hero-4.webp" alt="Energy-saving question image 4"></div>
+                    <div class="question-content">
+                        <p class="question-text">Have you replaced your HVAC filters?</p>
+                        <div class="slider-section">
+                            <input type="range" min="0" max="100" value="50" class="q-slider" id="slider-4" oninput="updateSlider(this)">
+                            <div class="slider-labels"><span>Yes</span><span>In progress</span><span>Not yet</span></div>
+                        </div>
+                        <div class="question-footer">
+                            <button class="prev-btn" onclick="goPreviousFromQuestion(4)">← Previous</button>
+                            <button class="submit-btn" onclick="submitAnswer(4)">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-view hidden" id="a-view-4">
+                    <div class="answer-hero"><img src="images/hero-4.webp" alt="Energy-saving result image 4"><img class="overlay-badge badge-pos-left badge-pos-top" src="images/badge-4.webp" alt="Question 4 badge"></div>
+                    <div class="answer-content">
+                        <p class="answer-title" id="answer-title-4"></p>
+                        <p class="answer-body-text" id="answer-text-4"></p>
+                        <div class="answer-buttons">
+                            <button class="prev-btn" onclick="goPreviousFromAnswer(4)">← Previous</button>
+                            <button class="next-btn" onclick="goNext(4)">Next &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-section hidden"><div class="progress-bar"><div class="progress-fill"></div></div><div class="progress-text">60%</div></div>
+        </div>
+
+        <div id="question-5" class="step">
+            <div class="slider-card">
+                <div class="q-view" id="q-view-5">
+                    <div class="question-hero"><img src="images/hero-5.webp" alt="Energy-saving question image 5"></div>
+                    <div class="question-content">
+                        <p class="question-text">Have you dusted your ceiling fans?</p>
+                        <div class="slider-section">
+                            <input type="range" min="0" max="100" value="50" class="q-slider" id="slider-5" oninput="updateSlider(this)">
+                            <div class="slider-labels"><span>Yes</span><span>In progress</span><span>Not yet</span></div>
+                        </div>
+                        <div class="question-footer">
+                            <button class="prev-btn" onclick="goPreviousFromQuestion(5)">← Previous</button>
+                            <button class="submit-btn" onclick="submitAnswer(5)">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-view hidden" id="a-view-5">
+                    <div class="answer-hero"><img src="images/hero-5.webp" alt="Energy-saving result image 5"><img class="overlay-badge badge-pos-right badge-pos-top" src="images/badge-5.webp" alt="Question 5 badge"></div>
+                    <div class="answer-content">
+                        <p class="answer-title" id="answer-title-5"></p>
+                        <p class="answer-body-text" id="answer-text-5"></p>
+                        <div class="answer-buttons">
+                            <button class="prev-btn" onclick="goPreviousFromAnswer(5)">← Previous</button>
+                            <button class="next-btn" onclick="goNext(5)">Finish &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-section hidden"><div class="progress-bar"><div class="progress-fill"></div></div><div class="progress-text">80%</div></div>
+        </div>
+
+        <div id="ending-screen" class="step">
+            <div class="slider-card ending-card">
+                <div class="ending-hero">
+                    <img src="images/hero-5.webp" alt="Thank you for playing background">
+                    <div class="ending-hero-overlay"></div>
+                    <img class="ending-badge" src="images/badge-6.webp" alt="Weekend winner badge">
+                </div>
+                <div class="ending-content">
+                    <p class="ending-title">Thank you for playing!</p>
+                    <p class="ending-text" id="ending-message">Now is a great time to prepare your home for summer to stay cool and reduce energy use. Try a few of these tips to beat the heat!</p>
+                    <div class="answer-buttons">
+                        <button class="prev-btn" onclick="goPreviousFromEnding()">← Previous</button>
+                        <button class="submit-btn" onclick="restartQuiz()">Start Over</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
