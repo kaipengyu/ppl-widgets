@@ -1,0 +1,664 @@
+/* Reset and base styles - ensuring they override Bootstrap */
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+body {
+    background-color: #001689 !important;
+    font-family: 'Raleway', Arial, sans-serif !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 2% !important;
+    position: relative !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+html {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    overscroll-behavior-x: none !important;
+}
+
+/* Iframe-friendly wrapper */
+.iframe-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+/* Title Section Styles */
+.title-section {
+    text-align: left;
+    max-width: 80%;
+    width: 100%;
+    z-index: 10;
+}
+
+@media (max-width: 600px) {
+   body{
+    justify-content: flex-start !important;
+   }
+   .title-section{
+    margin-top: 2rem !important;
+   }
+}
+
+
+
+
+
+.main-title {
+    color: white !important;
+    font-size: 2.5rem !important;
+    font-weight: bold !important;
+    margin: 0 0 1rem 0 !important;
+    line-height: 1.2 !important;
+    font-family: 'Raleway', Arial, sans-serif !important;
+}
+
+.subtitle {
+    color: white !important;
+    font-size: 1.125rem !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+    font-family: 'Raleway', Arial, sans-serif !important;
+    font-weight: normal !important;
+}
+
+.room-container {
+    width: 100%;
+    max-width: 75rem;
+    max-height: 55.625rem;
+    aspect-ratio: 1778/1321;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    will-change: transform;
+    transform-origin: center center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    contain: content;
+    isolation: isolate;
+}
+
+/* Mobile replacement image overlay */
+.mobile-replacement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 3; /* Above furniture */
+    display: none;
+    pointer-events: none;
+}
+
+.mobile-replacement.show {
+    display: block;
+}
+
+/* When a mobile tip is active, hide the base frame and furniture */
+@media (max-width: 600px) {
+    .room-container.mobile-tip-active .room-frame,
+    .room-container.mobile-tip-active .furniture {
+        display: none !important;
+    }
+}
+
+.room {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.room-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.frame-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.furniture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.item {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.furniture-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.furniture-img.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Positioning furniture based on Figma design, adjusted for room boundaries */
+
+.fridge {
+    top: 25.9%;
+    right: 20.5%;
+    width: 6%;
+    height: auto;
+}
+
+.thermostat {
+    top: 43.5%;
+    left: 54.2%;
+    width: 1.5%;
+    height: auto;
+}
+
+.lamp {
+    top: 57.5%;
+    left: 27.8%;
+    width: 8.1%;
+    height: auto;
+}
+
+.window {
+    top: 36.7%;
+    left: 12%;
+    width: 7%;
+    height: auto;
+}
+
+.couch {
+   bottom: 14.9%;
+    left: 52.4%;
+    width: 22.8%;
+    height: auto;
+}
+
+.showerhead {
+    top: 8.8%;
+    left: 54%;
+    width: 1.7%;
+    height: auto;
+}
+
+.thin-lamp {
+    top: 58%;
+    right: 27%;
+    width: 2.4%;
+    height: auto;
+}
+
+.dishwasher {
+    top: 37%;
+    right: 17%;
+    width: 5.5%;
+    height: auto;
+}
+
+/* Large screen adjustments */
+@media (min-width: 1400px) {
+    .room-container {
+        max-width: 62.5rem;
+        max-height: 46.25rem;
+    }
+}
+
+/* Info Dot Styles - Using Figma Dot */
+.info-dot {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: 2.0625rem;
+    height: 2.0625rem;
+    cursor: pointer;
+    z-index: 15;
+    transition: all 0.3s ease;
+    background: none;
+    border-radius: 50%;
+}
+.sofa-dot{
+    left: auto;
+    right: 1.5rem !important;
+    top: 0.5rem !important;
+}
+.lamp-dot{
+    right: 5rem !important;
+    top: 2rem !important;
+}
+.showerhead-dot{
+    top: 1rem !important;
+}
+.thermostat-dot{
+     top: -2rem !important;
+}
+.dishwasher-dot{
+    right:0rem !important;
+}
+
+.dot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 15;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Plus Icon Styles */
+.plus-icon path:first-child {
+    fill: #f0851c !important;
+    transition: fill 0.3s ease;
+}
+
+.info-dot.active .plus-icon path:first-child {
+    fill: #0078d3 !important;
+}
+
+/* Focus styles for keyboard accessibility */
+.dot-img:focus {
+    outline: 2px solid #0078D4;
+    outline-offset: 2px;
+    border-radius: 50%;
+}
+
+.dot-img:focus-visible {
+    outline: 2px solid #0078D4;
+    outline-offset: 2px;
+    border-radius: 50%;
+}
+
+.info-dot:hover .dot-img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 0.5rem rgba(0, 0, 0, 0.3));
+}
+
+/* Rotate plus to X when active */
+.info-dot.active .dot-img {
+    transform: rotate(45deg);
+}
+
+.info-dot.active:hover .dot-img {
+    transform: rotate(45deg) scale(1.1);
+}
+
+/* Info Tooltip Styles - Matching Figma Design */
+.info-tooltip {
+    position: absolute;
+    top: -7rem;
+    padding: 1.25rem 1.75rem !important;
+    right: -10rem;
+    width: 20rem;
+    background: #0078D4;
+    border-radius: 1.25rem;
+    box-shadow: 0 0.5rem 1.5625rem rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+    padding: 1.25rem;
+}
+.info-tooltip-window{
+    top: -6rem !important;
+    right: -11rem !important;
+}
+.info-tooltip-fridge{
+    right: -5rem !important;
+    top: -6rem !important;
+}
+.info-tooltip-dishwasher{
+     right: -5rem !important;   
+}
+.info-tooltip-thin-lamp{
+    top: -6rem !important;
+}
+.info-tooltip-showerhead{
+    top: -0.625rem !important;
+    padding-bottom: 1.25rem !important;
+    right: -19rem !important;
+}
+@media (max-width: 800px) {
+    .info-tooltip-showerhead{
+   right: -1rem !important;
+}
+}
+.info-tooltip-couch{
+    right: -5rem !important;
+}
+@media (min-width: 991px) {
+.info-tooltip-lamp{
+    right: -3rem !important;
+}
+}
+
+.info-dot.active .info-tooltip {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.info-tooltip-content {
+    position: relative;
+}
+
+.info-tooltip-content h4 {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    font-family: 'Raleway', Arial, sans-serif;
+    line-height: 1.2;
+    padding-bottom: 0.5rem !important;
+}
+
+.info-tooltip-content p {
+    color: white;
+    font-size: 0.875rem;
+    line-height: 1.3;
+    margin: 0;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: normal;
+}
+
+/* No arrow needed - matching Figma design */
+
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown-container {
+    display: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 3rem 0 !important;
+    margin-top: 1rem !important;
+    z-index: 10;
+}
+
+.dropdown-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.equipment-dropdown {
+    width: 100%;
+    padding: 0.75rem !important;
+    padding-right: 3rem !important; /* Make room for the custom chevron */
+    font-size: 1rem;
+    font-family: 'Raleway', Arial, sans-serif;
+    border: 2px solid #0078D4;
+    border-radius: 0.5rem;
+    background: white;
+    color: #001689;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.dropdown-chevron {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #001689;
+    font-size: 1.25rem; /* Larger size */
+    pointer-events: none;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.dropdown-chevron.open {
+    transform: translateY(-50%) rotate(180deg); /* Rotate 180 degrees when open */
+}
+
+.equipment-dropdown:focus {
+    border-color: #005a9e;
+    box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.2);
+}
+
+.equipment-dropdown:hover {
+    border-color: #005a9e;
+}
+
+.equipment-dropdown option {
+    padding: 0.5rem;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .mobile-dropdown-container {
+        display: block;
+    }
+    
+    /* Show mobile tooltip container and hide desktop tooltips */
+    .mobile-info-tooltip {
+        display: block !important;
+    }
+
+	/* Hide only the dot image on mobile, keep panel/area available */
+	.info-dot .dot-img {
+		display: none !important;
+	}
+    
+    /* Hide desktop tooltips on mobile */
+    .info-tooltip {
+        display: none !important;
+    }
+    
+    .title-section {
+        margin-bottom: 1rem !important;
+        max-width: 90%;
+    }
+    
+    .main-title {
+        font-size: 1.75rem !important;
+    }
+    
+    .subtitle {
+        font-size: 1rem !important;
+    }
+    
+    .room-container {
+        max-height: 60rem;
+    }
+    
+    .info-dot {
+        width: 1.75rem;
+        height: 1.75rem;
+        top: -0.875rem;
+        right: -0.875rem;
+    }
+    
+    .info-tooltip {
+        width: auto !important;
+        left: 1rem !important;
+        right: 1rem !important;
+        transform: none !important;
+        top: auto !important;
+        bottom: 3rem !important;
+        padding: 0.9375rem !important;
+        position: fixed !important;
+        z-index: 30 !important; /* above logo */
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    }
+    
+    .info-dot.active .info-tooltip {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+    
+    .info-tooltip-content h4 {
+        font-size: 1rem;
+    }
+    
+    .info-tooltip-content p {
+        font-size: 0.75rem;
+    }
+    
+    /* Mobile close button - only visible on mobile */
+    .info-tooltip-close-mobile {
+        position: absolute;
+        top: 0.625rem;
+        right: 0.625rem;
+        background: white;
+        border: 2px solid #0078D4;
+        color: #0078D4;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 1.75rem;
+        height: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        font-weight: bold;
+    }
+    
+    .info-tooltip-close-mobile:hover {
+        background: #f0f0f0;
+        transform: scale(1.1);
+    }
+    
+    .logo-section {
+        bottom: 6rem !important;
+        right: 0.75rem !important;
+        z-index: 45 !important;
+    }
+
+    /* Hide logo when mobile tooltip is showing */
+    .mobile-info-tooltip.show ~ .logo-section,
+    .mobile-info-tooltip.show + .logo-section {
+        display: none !important;
+    }
+    
+    /* Hide logo when a tooltip is open on mobile */
+    body.tooltip-open .logo-section {
+        display: none !important;
+    }
+    
+    .logo {
+        height: 2rem !important;
+    }
+}
+
+/* Hide mobile close button on desktop */
+.info-tooltip-close-mobile {
+    display: none;
+}
+
+/* Mobile Info Tooltip Styles */
+.mobile-info-tooltip {
+    display: none;
+    position: fixed;
+    padding: 1rem !important;
+    bottom: 5rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    background: linear-gradient(135deg, #0078D4 0%, #005a9e 100%);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    z-index: 40;
+    padding: 1.5rem 1.25rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: calc(100% - 1.5rem);
+    backdrop-filter: blur(10px);
+}
+
+.mobile-info-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mobile-info-tooltip-content h4 {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    font-family: 'Raleway', Arial, sans-serif;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.mobile-info-tooltip-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin: 0;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 400;
+}
+
+/* Logo Section Styles */
+.logo-section {
+    position: fixed !important;
+    bottom: 1rem !important;
+    right: 1rem !important;
+    z-index: 20 !important;
+}
+
+.logo {
+    height: 4rem !important;
+    width: auto !important;
+    object-fit: contain !important;
+    filter: brightness(0) invert(1) !important; /* Makes logo white */
+}

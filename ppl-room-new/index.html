@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home efficiency tips</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom styles (loaded after Bootstrap to override if needed) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="iframe-wrapper">
+        <!-- Title and Subtitle Section -->
+        <div class="title-section">
+            <h1 class="main-title">Energy savings—no landlord needed</h1>
+            <p class="subtitle">Renting doesn’t mean you’re out of options. Find real ways to save energy at home.</p>
+        
+        
+          <!-- Mobile Equipment Dropdown -->
+        <div class="mobile-dropdown-container">
+            <div class="dropdown-wrapper">
+                <select id="equipment-dropdown" class="equipment-dropdown">
+                    <option value="">Select an energy-saving tip...</option>
+                    <option value="fridge">Fridge Tip</option>
+                    <option value="thermostat">Thermostat Tip</option>
+                    <option value="lamp">LED Tip</option>
+                    <option value="window">Window Tip</option>
+                    <option value="couch">Vent Tip</option>
+                    <option value="showerhead">Showerhead Tip</option>
+                    <option value="thin-lamp">Lamp Tip</option>
+                    <option value="dishwasher">Dishwasher Tip</option>
+                </select>
+                <i class="fas fa-chevron-down dropdown-chevron" id="dropdown-chevron"></i>
+            </div>
+        </div>
+        
+        
+        
+        </div>
+        
+      
+    
+    <div class="room-container">
+        <div class="room">
+            <!-- Room frame/background -->
+            <div class="room-frame">
+                <img src="images/frame.svg" alt="Blueprint-style floor plan of an apartment, with various appliances highlighted in orange" class="frame-bg">
+            </div>
+            
+            <!-- Furniture and appliances positioned within the room -->
+            <div class="furniture">
+               
+                
+              
+                
+               
+                
+                <!-- Main lamp - positioned in living area -->
+                <div class="item lamp">
+                    <img src="images/lamp.svg" alt="Lamp" class="furniture-img">
+                    <div class="info-dot lamp-dot" data-equipment="lamp">
+                        <button class="dot-img" 
+                                aria-expanded="false"
+                                aria-describedby="lamp-tooltip"
+                                aria-label="Show energy saving tip for lamp"
+                                type="button">
+                           <svg  class="plus-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none" viewBox="0 0 33 33"><g clip-path="url(#a)"><path fill="#0078d3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16.5 32.5c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16"/><path fill="#fff" d="M24.28 15.98v1.04h-7.26v7.78h-1.04v-7.78H8.71v-1.04h7.27V8.2h1.04v7.78z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h33v33H0z"/></clipPath></defs></svg>
+                        </button>
+                        <div class="info-tooltip info-tooltip-lamp" id="lamp-tooltip" role="tooltip" aria-hidden="true">
+                            <div class="info-tooltip-content">
+                                <h4>Brighten things up for less</h4>
+                                <p>Use LED bulbs in track, recessed or outdoor fixtures and cut lighting energy use by up to 75%.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Window - positioned on wall -->
+                <div class="item window">
+                    <img src="images/window.svg" alt="Window" class="furniture-img">
+                    <div class="info-dot window-dot" data-equipment="window">
+                        <button class="dot-img" 
+                                aria-expanded="false"
+                                aria-describedby="window-tooltip"
+                                aria-label="Show energy saving tip for window"
+                                type="button">
+                           <svg  class="plus-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none" viewBox="0 0 33 33"><g clip-path="url(#a)"><path fill="#0078d3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16.5 32.5c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16"/><path fill="#fff" d="M24.28 15.98v1.04h-7.26v7.78h-1.04v-7.78H8.71v-1.04h7.27V8.2h1.04v7.78z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h33v33H0z"/></clipPath></defs></svg>
+                        </button>
+                        <div class="info-tooltip info-tooltip-window" id="window-tooltip" role="tooltip" aria-hidden="true">
+                            <div class="info-tooltip-content">
+                                <h4>Stay cozy all winter</h4>
+                                <p>Seal drafty windows with a plastic film kit to keep the heat in and the cold out.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                
+                <!-- Showerhead - positioned in bathroom area -->
+                <div class="item showerhead">
+                    <img src="images/showerhead.svg" alt="Showerhead" class="furniture-img">
+                    <div class="info-dot showerhead-dot" data-equipment="showerhead">
+                        <button class="dot-img" 
+                                aria-expanded="false"
+                                aria-describedby="showerhead-tooltip"
+                                aria-label="Show energy saving tip for showerhead"
+                                type="button">
+                           <svg  class="plus-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none" viewBox="0 0 33 33"><g clip-path="url(#a)"><path fill="#0078d3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16.5 32.5c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16"/><path fill="#fff" d="M24.28 15.98v1.04h-7.26v7.78h-1.04v-7.78H8.71v-1.04h7.27V8.2h1.04v7.78z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h33v33H0z"/></clipPath></defs></svg>
+                        </button>
+                        <div class="info-tooltip info-tooltip-showerhead" id="showerhead-tooltip" role="tooltip" aria-hidden="true">
+                            <div class="info-tooltip-content">
+                                <h4>Save money in the shower</h4>
+                                <p>Switch to a low-flow showerhead. It’s inexpensive, easy to install and lowers both water and heating costs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <!-- Fridge - positioned in kitchen area -->
+                <div class="item fridge">
+                    <img src="images/fridge.svg" alt="Fridge" class="furniture-img">
+                    <div class="info-dot fridge-dot" data-equipment="fridge">
+                        <button class="dot-img" 
+                                aria-expanded="false"
+                                aria-describedby="fridge-tooltip"
+                                aria-label="Show energy saving tip for fridge"
+                                type="button">
+                           <svg  class="plus-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none" viewBox="0 0 33 33"><g clip-path="url(#a)"><path fill="#0078d3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16.5 32.5c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16"/><path fill="#fff" d="M24.28 15.98v1.04h-7.26v7.78h-1.04v-7.78H8.71v-1.04h7.27V8.2h1.04v7.78z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h33v33H0z"/></clipPath></defs></svg>
+                        </button>
+                        <div class="info-tooltip info-tooltip-fridge" id="fridge-tooltip" role="tooltip" aria-hidden="true">
+                            <div class="info-tooltip-content">
+                                <h4>Help your fridge work smarter</h4>
+                                <p>Vacuum behind it to keep air flowing and your energy costs down.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- Thermostat - positioned on wall -->
+                <div class="item thermostat">
+                    <img src="images/thermostat.svg" alt="Thermostat" class="furniture-img">
+                    <div class="info-dot thermostat-dot" data-equipment="thermostat">
+                        <button class="dot-img" 
+                                aria-expanded="false"
+                                aria-describedby="thermostat-tooltip"
+                                aria-label="Show energy saving tip for thermostat"
+                                type="button">
+                           <svg  class="plus-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none" viewBox="0 0 33 33"><g clip-path="url(#a)"><path fill="#0078d3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16.5 32.5c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16"/><path fill="#fff" d="M24.28 15.98v1.04h-7.26v7.78h-1.04v-7.78H8.71v-1.04h7.27V8.2h1.04v7.78z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h33v33H0z"/></clipPath></defs></svg>
+                        </button>
+                        <div class="info-tooltip info-tooltip-thermostat" id="thermostat-tooltip" role="tooltip" aria-hidden="true">
+                            <div class="info-tooltip-content">
+                                <h4>Lower your heating bills</h4>
+                                <p>Set your thermostat to 68°F when you’re home in winter, and even lower when you’re asleep or away.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                
+                <!-- Dishwasher - positioned in kitchen area -->
+                <div class="item dishwasher">
+                    <img src="images/dishwasher.svg" alt="Dishwasher" class="furniture-img">
+                    <div class="info-dot dishwasher-dot" data-equipment="dishwasher">
+                        <button class="dot-img" 
+                                aria-expanded="false"
+                                aria-describedby="dishwasher-tooltip"
+                                aria-label="Show energy saving tip for dishwasher"
+                                type="button">
+                           <svg  class="plus-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none" viewBox="0 0 33 33"><g clip-path="url(#a)"><path fill="#0078d3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16.5 32.5c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16"/><path fill="#fff" d="M24.28 15.98v1.04h-7.26v7.78h-1.04v-7.78H8.71v-1.04h7.27V8.2h1.04v7.78z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h33v33H0z"/></clipPath></defs></svg>
+                        </button>
+                        <div class="info-tooltip info-tooltip-dishwasher" id="dishwasher-tooltip" role="tooltip" aria-hidden="true">
+                            <div class="info-tooltip-content">
+                                <h4>Cut kitchen energy costs</h4>
+                                <p>Let dishes air dry instead of running the heated cycle. Just crack the door and save on every load.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                  <!-- Thin lamp - positioned in bedroom area -->
+                <div class="item thin-lamp">
+                    <img src="images/thin-lamp.svg" alt="Thin Lamp" class="furniture-img">
+                    <div class="info-dot thin-lamp-dot" data-equipment="thin-lamp">
+                        <button class="dot-img" 
+                                aria-expanded="false"
+                                aria-describedby="thin-lamp-tooltip"
+                                aria-label="Show energy saving tip for thin lamp"
+                                type="button">
+                           <svg  class="plus-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none" viewBox="0 0 33 33"><g clip-path="url(#a)"><path fill="#0078d3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16.5 32.5c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16"/><path fill="#fff" d="M24.28 15.98v1.04h-7.26v7.78h-1.04v-7.78H8.71v-1.04h7.27V8.2h1.04v7.78z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h33v33H0z"/></clipPath></defs></svg>
+                        </button>
+                        <div class="info-tooltip info-tooltip-thin-lamp" id="thin-lamp-tooltip" role="tooltip" aria-hidden="true">
+                            <div class="info-tooltip-content">
+                                <h4>Light only where you need it</h4>
+                                <p>Try lamps or under-cabinet lights instead of lighting the whole room.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!-- Couch/Sofa - positioned in living area -->
+                <div class="item couch">
+                    <img src="images/sofa.svg" alt="Couch" class="furniture-img">
+                    <div class="info-dot sofa-dot" data-equipment="couch">
+                        <button class="dot-img" 
+                                aria-expanded="false"
+                                aria-describedby="couch-tooltip"
+                                aria-label="Show energy saving tip for couch"
+                                type="button">
+                           <svg  class="plus-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none" viewBox="0 0 33 33"><g clip-path="url(#a)"><path fill="#0078d3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16.5 32.5c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16"/><path fill="#fff" d="M24.28 15.98v1.04h-7.26v7.78h-1.04v-7.78H8.71v-1.04h7.27V8.2h1.04v7.78z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h33v33H0z"/></clipPath></defs></svg>
+                        </button>
+                        <div class="info-tooltip info-tooltip-couch" id="couch-tooltip" role="tooltip" aria-hidden="true">
+                            <div class="info-tooltip-content">
+                                <h4>Get more out of your vents</h4>
+                                <p>Leave a foot of space around them and keep them dust-free so warm air flows freely.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile replacement image overlay (shown on mobile when a tip is selected) -->
+        <img id="mobile-replacement" class="mobile-replacement" alt="Selected tip mobile view" aria-hidden="true">
+    </div>
+    
+    <!-- Mobile Info Tooltip -->
+    <div class="mobile-info-tooltip" id="mobile-info-tooltip">
+        <div class="mobile-info-tooltip-content">
+            <h4 id="mobile-tooltip-title">Select an energy-saving tip...</h4>
+            <p id="mobile-tooltip-description">Choose from the dropdown above to see energy-saving tips for different areas of your home.</p>
+        </div>
+    </div>
+    
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <img src="images/logo.svg" alt="PPL Electric Utilities" class="logo">
+        </div>
+    </div>
+    
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- Custom JavaScript for Info Dots -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const infoDots = document.querySelectorAll('.info-dot');
+            const dotButtons = document.querySelectorAll('.dot-img');
+            const equipmentDropdown = document.getElementById('equipment-dropdown');
+            const dropdownChevron = document.getElementById('dropdown-chevron');
+            const roomContainer = document.querySelector('.room-container');
+            const mobileReplacement = document.getElementById('mobile-replacement');
+            const mobileTooltip = document.getElementById('mobile-info-tooltip');
+            const mobileTooltipTitle = document.getElementById('mobile-tooltip-title');
+            const mobileTooltipDescription = document.getElementById('mobile-tooltip-description');
+            
+            // Performance hint for mobile transforms
+            if (roomContainer && window.gsap) {
+                gsap.set(roomContainer, { willChange: 'transform', force3D: true });
+            }
+            
+            // Animation state management
+            let currentAnimation = null;
+            let animationRafScheduled = false;
+            let coalesceTimer = null; // debounce timer for mobile zoom
+            let lastViewState = '';
+            let isDropdownOpen = false; // shared across handlers
+            let lastIsMobile = isMobile();
+            
+            // Function to check if device is mobile
+            function isMobile() {
+                return window.innerWidth <= 600; // 600px breakpoint
+            }
+            
+            // Function to update mobile tooltip content
+            function updateMobileTooltip(equipmentType) {
+                if (!mobileTooltip || !mobileTooltipTitle || !mobileTooltipDescription) {
+                    return;
+                }
+                
+                // Always update content, but only show on mobile
+                const isCurrentlyMobile = window.innerWidth <= 600;
+                let tooltipHideShowTimer = null;
+                
+                const tooltipData = {
+                    'fridge': {
+                        title: 'Help your fridge work smarter',
+                        description: 'Vacuum behind it to keep air flowing and your energy costs down.'
+                    },
+                    'thermostat': {
+                        title: 'Lower your heating bills',
+                        description: 'Set your thermostat to 68°F when you’re home in winter, and even lower when you’re asleep or away.'
+                    },
+                    'lamp': {
+                        title: 'Brighten things up for less',
+                        description: 'Use LED bulbs in track, recessed or outdoor fixtures and cut lighting energy use by up to 75%.'
+                    },
+                    'window': {
+                        title: 'Stay cozy all winter',
+                        description: 'Seal drafty windows with a plastic film kit to keep the heat in and the cold out.'
+                    },
+                    'couch': {
+                        title: 'Get more out of your vents',
+                        description: 'Leave a foot of space around them and keep them dust-free so warm air flows freely.'
+                    },
+                    'showerhead': {
+                        title: 'Save money in the shower',
+                        description: 'Switch to a low-flow showerhead. It’s inexpensive, easy to install and lowers both water and heating costs.'
+                    },
+                    'thin-lamp': {
+                        title: 'Light only where you need it',
+                        description: 'Try lamps or under-cabinet lights instead of lighting the whole room.'
+                    },
+                    'dishwasher': {
+                        title: 'Cut kitchen energy costs',
+                        description: 'Let dishes air dry instead of running the heated cycle. Just crack the door and save on every load.'
+                    }
+                };
+                
+                if (equipmentType && tooltipData[equipmentType]) {
+                    // Show tooltip only on mobile when tip is selected
+                    if (isCurrentlyMobile) {
+                        const isDifferent = window.lastMobileTooltipType !== equipmentType;
+                        const isShowing = mobileTooltip.classList.contains('show');
+
+                        // Define show handler to update and reveal
+                        const showWithNewContent = () => {
+                            mobileTooltipTitle.textContent = tooltipData[equipmentType].title;
+                            mobileTooltipDescription.textContent = tooltipData[equipmentType].description;
+                            // next frame to ensure DOM paints hidden state before showing
+                            requestAnimationFrame(() => {
+                                mobileTooltip.classList.add('show');
+                                window.lastMobileTooltipType = equipmentType;
+                            });
+                        };
+
+                        if (isDifferent && isShowing) {
+                            // Fade out first, then update content, then fade back in
+                            const onTransitionEnd = (ev) => {
+                                if (ev.propertyName !== 'opacity') return; // only after opacity transition
+                                mobileTooltip.removeEventListener('transitionend', onTransitionEnd);
+                                if (tooltipHideShowTimer) {
+                                    clearTimeout(tooltipHideShowTimer);
+                                }
+                                showWithNewContent();
+                            };
+                            mobileTooltip.addEventListener('transitionend', onTransitionEnd, { once: true });
+                            // Fallback in case transitionend doesn't fire
+                            tooltipHideShowTimer = setTimeout(() => {
+                                mobileTooltip.removeEventListener('transitionend', onTransitionEnd);
+                                showWithNewContent();
+                            }, 350);
+                            // trigger hide
+                            mobileTooltip.classList.remove('show');
+                        } else {
+                            // First show or same tip selected
+                            showWithNewContent();
+                        }
+                    } else {
+                        mobileTooltip.classList.remove('show');
+                        window.lastMobileTooltipType = '';
+                    }
+                } else {
+                    // Hide tooltip when no tip is selected
+                    mobileTooltip.classList.remove('show');
+                    window.lastMobileTooltipType = '';
+                }
+            }
+            
+            // Resolve image source for mobile replacement asset
+            function getMobileImageSrc(equipmentType) {
+                const filenameMap = {
+                    'fridge': 'fridge-mobile.svg',
+                    'thermostat': 'thermostat-mobile.svg',
+                    'lamp': 'lamp-mobile.svg',
+                    'window': 'window-mobile.svg',
+                    'couch': 'sofa-mobile.svg',
+                    'showerhead': 'showerhead-mobile.svg',
+                    'thin-lamp': 'thin-lamp-mobile.svg',
+                    'dishwasher': 'dishwasher-mobile.svg'
+                };
+                const filename = filenameMap[equipmentType];
+                return filename ? `images/${filename}` : '';
+            }
+
+            // Function to check if any tip is currently selected
+            function isTipSelected() {
+                return document.querySelector('.info-dot.active') !== null || 
+                       (equipmentDropdown && equipmentDropdown.value !== '');
+            }
+            
+            // GSAP Animation variables
+            let currentEquipmentImg = null;
+            
+            // Centralized animation function - only called once per user action
+            function animateToTip(tipType) {
+                // Kill any existing animation
+                if (currentAnimation) {
+                    currentAnimation.kill();
+                }
+                gsap.killTweensOf(roomContainer);
+                
+                // Mark animating to delay other UI changes
+                document.body.classList.add('animating');
+
+                // Set current equipment image for synchronized highlighting
+                if (tipType) {
+                    const targetDot = document.querySelector(`[data-equipment="${tipType}"]`);
+                    if (targetDot) {
+                        const furnitureItem = targetDot.closest('.item');
+                        currentEquipmentImg = furnitureItem.querySelector('.furniture-img');
+                    }
+                } else {
+                    currentEquipmentImg = null;
+                }
+                
+                // On mobile, skip zoom: show mobile replacement image instead
+                if (isMobile()) {
+                    if (tipType) {
+                        const src = getMobileImageSrc(tipType);
+                        if (mobileReplacement && src) {
+                            mobileReplacement.src = src;
+                            mobileReplacement.classList.add('show');
+                        }
+                        if (roomContainer) {
+                            roomContainer.classList.add('mobile-tip-active');
+                        }
+                        // Hide any inline furniture images
+                        document.querySelectorAll('.furniture-img.show').forEach(img => img.classList.remove('show'));
+                        updateMobileTooltip(tipType);
+                    } else {
+                        if (mobileReplacement) {
+                            mobileReplacement.classList.remove('show');
+                            mobileReplacement.removeAttribute('src');
+                        }
+                        if (roomContainer) {
+                            roomContainer.classList.remove('mobile-tip-active');
+                        }
+                        updateMobileTooltip('');
+                    }
+                    // Ensure transforms are reset
+                    if (window.gsap && roomContainer) {
+                        gsap.set(roomContainer, { scale: 1, xPercent: 0, yPercent: 0, transformOrigin: "center center" });
+                    }
+                    document.body.classList.remove('animating');
+                    currentAnimation = null;
+                    return;
+                }
+
+                // Desktop: keep original zoom behavior
+                // Reset to default values when no tipType
+                if (mobileReplacement) {
+                    mobileReplacement.classList.remove('show');
+                    mobileReplacement.removeAttribute('src');
+                }
+                if (roomContainer) {
+                    roomContainer.classList.remove('mobile-tip-active');
+                }
+                // Ensure the highlighted furniture is visible on desktop when a tip is active
+                if (!isMobile() && tipType && currentEquipmentImg) {
+                    currentEquipmentImg.classList.add('show');
+                }
+                currentAnimation = gsap.to(roomContainer, {
+                    duration: 0.3,
+                    ease: "power2.out",
+                    force3D: true,
+                    autoRound: false,
+                    overwrite: "auto",
+                    scale: tipType ? 1 : 1,
+                    xPercent: 0,
+                    yPercent: 0,
+                    transformOrigin: "center center",
+                    onComplete: () => {
+                        if (!tipType) {
+                            updateMobileTooltip('');
+                        }
+                        document.body.classList.remove('animating');
+                        currentAnimation = null;
+                    }
+                });
+            }
+            
+            // Function to update room container zoom based on mobile state and tip selection
+            function updateRoomZoom() {
+                const activeTip = document.querySelector('.info-dot.active');
+                const dropdownValue = equipmentDropdown ? equipmentDropdown.value : '';
+                
+                // Determine which tip is active
+                let tipType = '';
+                if (activeTip) {
+                    tipType = activeTip.getAttribute('data-equipment');
+                } else if (dropdownValue) {
+                    tipType = dropdownValue;
+                }
+                // Debounce on mobile to coalesce rapid state changes into one tween
+                if (coalesceTimer) {
+                    clearTimeout(coalesceTimer);
+                }
+                coalesceTimer = setTimeout(() => {
+                    if (animationRafScheduled) return;
+                    animationRafScheduled = true;
+                    requestAnimationFrame(() => {
+                        animationRafScheduled = false;
+                        const isMob = isMobile();
+                        const currentKey = (isMob ? 'm' : 'd') + '|' + (tipType || '');
+                        if (currentKey === lastViewState) {
+                            return; // avoid redundant tweens
+                        }
+                        lastViewState = currentKey;
+                        animateToTip(tipType);
+                    });
+                }, 60);
+            }
+            
+            // Function to close all tooltips
+            function closeAllTooltips(options = { skipZoom: false }) {
+                infoDots.forEach(infoDot => {
+                    const button = infoDot.querySelector('.dot-img');
+                    const tooltip = infoDot.querySelector('.info-tooltip');
+                    infoDot.classList.remove('active');
+                    if (button) {
+                        button.setAttribute('aria-expanded', 'false');
+                    }
+                    if (tooltip) {
+                        tooltip.setAttribute('aria-hidden', 'true');
+                    }
+                    const furnitureItem = infoDot.closest('.item');
+                    const furnitureImg = furnitureItem.querySelector('.furniture-img');
+                    furnitureImg.classList.remove('show');
+                });
+                document.body.classList.remove('tooltip-open');
+                if (!options.skipZoom) {
+                    updateRoomZoom(); // Update zoom when tooltips are closed
+                }
+            }
+
+            // Function to open specific tooltip by equipment type
+            function openTooltipByType(equipmentType) {
+                closeAllTooltips({ skipZoom: true });
+                const targetDot = document.querySelector(`[data-equipment="${equipmentType}"]`);
+                if (targetDot) {
+                    const button = targetDot.querySelector('.dot-img');
+                    const tooltip = targetDot.querySelector('.info-tooltip');
+                    const furnitureItem = targetDot.closest('.item');
+                    const furnitureImg = furnitureItem.querySelector('.furniture-img');
+                    
+                    targetDot.classList.add('active');
+                    if (button) {
+                        button.setAttribute('aria-expanded', 'true');
+                    }
+                    if (tooltip) {
+                        tooltip.setAttribute('aria-hidden', 'false');
+                    }
+                    // Only show equipment immediately on desktop, mobile will be handled by animation
+                    if (!isMobile()) {
+                        furnitureImg.classList.add('show');
+                    }
+                    document.body.classList.add('tooltip-open');
+                    updateRoomZoom(); // Update zoom when tooltip is opened
+                }
+            }
+
+            // Function to toggle tooltip and update ARIA states
+            function toggleTooltip(button) {
+                const infoDot = button.closest('.info-dot');
+                const equipmentType = infoDot.getAttribute('data-equipment');
+                const furnitureItem = infoDot.closest('.item');
+                const furnitureImg = furnitureItem.querySelector('.furniture-img');
+                const tooltip = infoDot.querySelector('.info-tooltip');
+                
+                // Close any other open tooltips and hide their equipment
+                infoDots.forEach(otherDot => {
+                    if (otherDot !== infoDot) {
+                        otherDot.classList.remove('active');
+                        otherDot.setAttribute('aria-expanded', 'false');
+                        const otherTooltip = otherDot.querySelector('.info-tooltip');
+                        if (otherTooltip) {
+                            otherTooltip.setAttribute('aria-hidden', 'true');
+                        }
+                        const otherEquipmentType = otherDot.getAttribute('data-equipment');
+                        const otherFurnitureItem = otherDot.closest('.item');
+                        const otherFurnitureImg = otherFurnitureItem.querySelector('.furniture-img');
+                        otherFurnitureImg.classList.remove('show');
+                    }
+                });
+                
+                // Toggle current tooltip
+                const isActive = infoDot.classList.contains('active');
+                infoDot.classList.toggle('active');
+                
+                // Update ARIA states
+                button.setAttribute('aria-expanded', !isActive);
+                if (tooltip) {
+                    tooltip.setAttribute('aria-hidden', isActive);
+                }
+                
+                // Show/hide corresponding equipment image
+                if (!isActive) {
+                    // Only show equipment immediately on desktop, mobile will be handled by animation
+                    if (!isMobile()) {
+                        furnitureImg.classList.add('show');
+                    }
+                } else {
+                    furnitureImg.classList.remove('show');
+                }
+                
+                // Manage body state for mobile logo visibility
+                if (!isActive) {
+                    document.body.classList.add('tooltip-open');
+                } else {
+                    const anyOpen = document.querySelector('.info-dot.active');
+                    if (!anyOpen) {
+                        document.body.classList.remove('tooltip-open');
+                    }
+                }
+                
+                // Update dropdown selection to match
+                if (equipmentDropdown) {
+                    equipmentDropdown.value = !isActive ? equipmentType : '';
+                }
+                
+                // Update room zoom and mobile tooltip
+                updateRoomZoom();
+            }
+            
+            // Add click event listeners to all dot buttons
+            dotButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    toggleTooltip(this);
+                });
+                
+                // Add keyboard event listeners for accessibility
+                button.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        toggleTooltip(this);
+                    }
+                });
+            });
+            
+            
+            // Add dropdown change event listener
+            if (equipmentDropdown) {
+                equipmentDropdown.addEventListener('change', function(e) {
+                    const selectedValue = e.target.value;
+                    if (selectedValue) {
+                        openTooltipByType(selectedValue);
+                    } else {
+                        closeAllTooltips();
+                    }
+                });
+                
+                // Track dropdown open state (declared above)
+                
+                // Add focus event listener for chevron rotation when dropdown opens
+                equipmentDropdown.addEventListener('focus', function() {
+                    if (dropdownChevron && !isDropdownOpen) {
+                        dropdownChevron.classList.add('open');
+                        isDropdownOpen = true;
+                    }
+                });
+                
+                // Add mousedown event listener to handle dropdown opening
+                equipmentDropdown.addEventListener('mousedown', function() {
+                    if (dropdownChevron && !isDropdownOpen) {
+                        dropdownChevron.classList.add('open');
+                        isDropdownOpen = true;
+                    }
+                });
+                
+                // Add change event listener to close chevron when selection is made
+                equipmentDropdown.addEventListener('change', function(e) {
+                    if (dropdownChevron && isDropdownOpen) {
+                        dropdownChevron.classList.remove('open');
+                        isDropdownOpen = false;
+                    }
+                });
+                
+                // Add blur event listener to close chevron when dropdown loses focus
+                equipmentDropdown.addEventListener('blur', function() {
+                    // Use setTimeout to allow the change event to fire first
+                    setTimeout(function() {
+                        if (dropdownChevron && isDropdownOpen) {
+                            dropdownChevron.classList.remove('open');
+                            isDropdownOpen = false;
+                        }
+                    }, 100);
+                });
+                
+                // Add keyboard event listeners for accessibility
+                equipmentDropdown.addEventListener('keydown', function(e) {
+                    // Open dropdown with Enter or Space key
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        if (dropdownChevron && !isDropdownOpen) {
+                            dropdownChevron.classList.add('open');
+                            isDropdownOpen = true;
+                        }
+                        // Simulate a click to open the dropdown
+                        this.click();
+                    }
+                    // Close dropdown with Escape key
+                    else if (e.key === 'Escape') {
+                        if (dropdownChevron && isDropdownOpen) {
+                            dropdownChevron.classList.remove('open');
+                            isDropdownOpen = false;
+                        }
+                        this.blur();
+                    }
+                });
+            }
+
+            // Close tooltip when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.info-dot') && !e.target.closest('.mobile-dropdown-container')) {
+                    closeAllTooltips();
+                    if (equipmentDropdown) {
+                        equipmentDropdown.value = '';
+                    }
+                    if (dropdownChevron) {
+                        dropdownChevron.classList.remove('open');
+                        isDropdownOpen = false;
+                    }
+                }
+            });
+            
+            // Close tooltip when pressing Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeAllTooltips();
+                    if (equipmentDropdown) {
+                        equipmentDropdown.value = '';
+                    }
+                    if (dropdownChevron) {
+                        dropdownChevron.classList.remove('open');
+                        isDropdownOpen = false;
+                    }
+                }
+            });
+            
+            // Update zoom and mobile tooltip when window is resized (e.g., device rotation)
+            window.addEventListener('resize', function() {
+                const nowIsMobile = isMobile();
+                const currentEquipment = equipmentDropdown ? equipmentDropdown.value : '';
+
+                // If crossing breakpoint, immediately sync UI without animation to avoid lag
+                if (nowIsMobile !== lastIsMobile) {
+                    // Cancel any ongoing animation or scheduled work
+                    if (currentAnimation) {
+                        currentAnimation.kill();
+                        currentAnimation = null;
+                    }
+                    if (window.gsap && roomContainer) {
+                        gsap.killTweensOf(roomContainer);
+                        gsap.set(roomContainer, { scale: 1, xPercent: 0, yPercent: 0, transformOrigin: 'center center' });
+                    }
+                    if (coalesceTimer) {
+                        clearTimeout(coalesceTimer);
+                        coalesceTimer = null;
+                    }
+                    animationRafScheduled = false;
+                    document.body.classList.remove('animating');
+                    lastViewState = '';
+
+                    // Determine active tip type
+                    let tipType = '';
+                    if (currentEquipment) {
+                        tipType = currentEquipment;
+                    } else {
+                        const activeTip = document.querySelector('.info-dot.active');
+                        if (activeTip) {
+                            tipType = activeTip.getAttribute('data-equipment') || '';
+                        }
+                    }
+
+                    if (nowIsMobile) {
+                        // Entering mobile
+                        if (tipType) {
+                            const src = getMobileImageSrc(tipType);
+                            if (mobileReplacement && src) {
+                                mobileReplacement.src = src;
+                                mobileReplacement.classList.add('show');
+                            }
+                            if (roomContainer) {
+                                roomContainer.classList.add('mobile-tip-active');
+                            }
+                            // Hide any inline furniture images
+                            document.querySelectorAll('.furniture-img.show').forEach(img => img.classList.remove('show'));
+                            updateMobileTooltip(tipType);
+                        } else {
+                            if (mobileReplacement) {
+                                mobileReplacement.classList.remove('show');
+                                mobileReplacement.removeAttribute('src');
+                            }
+                            if (roomContainer) {
+                                roomContainer.classList.remove('mobile-tip-active');
+                            }
+                            updateMobileTooltip('');
+                        }
+                    } else {
+                        // Entering desktop
+                        if (mobileReplacement) {
+                            mobileReplacement.classList.remove('show');
+                            mobileReplacement.removeAttribute('src');
+                        }
+                        if (roomContainer) {
+                            roomContainer.classList.remove('mobile-tip-active');
+                        }
+                        if (tipType) {
+                            const targetDot = document.querySelector(`[data-equipment="${tipType}"]`);
+                            if (targetDot) {
+                                const furnitureItem = targetDot.closest('.item');
+                                const furnitureImg = furnitureItem ? furnitureItem.querySelector('.furniture-img') : null;
+                                if (furnitureImg) {
+                                    furnitureImg.classList.add('show');
+                                }
+                            }
+                        }
+                        // Hide mobile tooltip on desktop
+                        updateMobileTooltip('');
+                    }
+
+                    lastIsMobile = nowIsMobile;
+                    return; // Skip animated update on this resize tick
+                }
+
+                // Not crossing breakpoint: proceed with normal coalesced update
+                updateRoomZoom();
+                updateMobileTooltip(currentEquipment);
+            });
+            
+            // Initialize mobile tooltip on page load
+            updateMobileTooltip('');
+        });
+    </script>
+</body>
+</html>

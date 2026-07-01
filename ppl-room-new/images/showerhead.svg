@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.73 16.84">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #f0851c;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-width: .75px;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="Showerhead_Filled" data-name="Showerhead Filled">
+    <g>
+      <polygon class="cls-2" points=".38 11.6 .38 4.55 1.8 5.38 1.8 12.43 .38 11.6"/>
+      <polygon class="cls-1" points="19.92 8.56 6.69 .5 4.75 2.08 16.68 9.27 19.92 8.56"/>
+      <path class="cls-3" d="M5.79,1.24c-1.57,0-2.84,1.67-2.84,3.73"/>
+      <polygon class="cls-2" points=".38 4.55 2.68 3.22 4.1 4.05 4.1 11.1 1.8 12.43 1.8 5.38 .38 4.55"/>
+      <ellipse class="cls-1" cx="19.91" cy="12.12" rx="7.32" ry="4.23"/>
+    </g>
+    <line class="cls-2" x1="4.1" y1="4.05" x2="1.8" y2="5.38"/>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.71 241.52">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #f0851c;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="Fridge_Filled" data-name="Fridge Filled">
+    <g>
+      <polygon class="cls-2" points="55.85 59.24 5.66 30.26 56.77 .75 106.96 29.73 55.85 59.24"/>
+      <polygon class="cls-2" points="73.09 228.93 55.85 238.89 55.85 59.24 106.96 29.73 106.96 156.81 73.09 176.27 73.09 228.93"/>
+      <polyline class="cls-2" points="2.4 42.73 2.4 32.14 52.59 61.12 52.59 171.02 2.4 142.04 2.4 124.87"/>
+      <polygon class="cls-2" points="52.59 240.77 2.4 211.79 2.4 143.01 52.59 171.98 52.59 240.77"/>
+      <polyline class="cls-1" points="2.87 51.46 6.28 49.49 6.28 55.28 2.87 57.26"/>
+      <polyline class="cls-1" points="2.87 109.75 6.28 107.78 6.28 113.58 2.87 115.55"/>
+      <path class="cls-1" d="M.5,45.87c0-.38.53-.68,1.18-.68s1.18.31,1.18.68"/>
+      <path class="cls-1" d="M.5,121.54c0,.38.53.68,1.18.68s1.18-.31,1.18-.68V45.87c0,.38-.53.68-1.18.68s-1.18-.31-1.18-.68v75.68Z"/>
+    </g>
+  </g>
+</svg>
