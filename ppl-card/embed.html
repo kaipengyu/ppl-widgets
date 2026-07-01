@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPL Energy Savings Game - Embed</title>
+    <style>
+
+        .embed-container {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .iframe-wrapper {
+            width: 100%;
+            min-height: 800px;
+        }
+
+        .game-iframe {
+            position: static;
+            width: 100%;
+            min-height: 800px;
+            border: none;
+        }
+
+         @media (max-width: 1200px) {
+            .iframe-wrapper,
+            .game-iframe {
+                min-height: 1000px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .iframe-wrapper,
+            .game-iframe {
+                min-height: 800px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .iframe-wrapper,
+            .game-iframe {
+                min-height: 900px;
+            }
+        }
+
+     
+    </style>
+</head>
+<body>
+    <div class="embed-container">
+        <div class="iframe-wrapper">
+            <iframe 
+                src="index.html" 
+                class="game-iframe"
+                title="PPL Energy Savings Game"
+                allow="fullscreen"
+                loading="lazy"
+                sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation">
+                <p>Your browser does not support iframes. <a href="index.html" target="_blank">Open the game in a new tab</a>.</p>
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>
